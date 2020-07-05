@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(224, 224, 224);
+    margin:0px;
+}
+
+
+.titulo{
+    display:block;
+    margin:40px 0px;
+    color:rgb(24, 138, 231);
+    text-align: center;
+}
