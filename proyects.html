@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="StyleSheet" href="styles.css" type="text/css">
+    <link rel="StyleSheet" href="proyects.css" type="text/css">
     <title>Proyectos</title>
 </head>
-<body id="area">
+<body onresize="ajustarTamaño()">
 
-    <div class="menu" id="area">
+    <div class="menu" id="menu">
         <ul>
             <li><a href="/index.html">Inicio</a></li>
             <li><a href="/proyects.html">Proyectos</a></li>
@@ -16,10 +16,10 @@
         </ul>
     </div>
 
-    <h1 class="titulo">Proyectos</h1>
+    <h1 class="titulo" id="titulo">Proyectos</h1>
 
-    <p>Cantidad y descripcion de los proyectos realizados :)</p>
+    <p class="texto" id="subtitulo">Cantidad y descripcion de los proyectos realizados :)</p>
 
-    <script src="functions.js" ></script>
+    <script src="proyects.js" ></script>
 </body>
 </html>
