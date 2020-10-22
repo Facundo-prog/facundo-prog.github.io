@@ -26,7 +26,6 @@ function esconderMenuLateral(){
 }
 
 
-
 function expandirMenu(){
 
     estadoPrecionado = !estadoPrecionado;
