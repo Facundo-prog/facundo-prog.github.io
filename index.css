@@ -1,8 +1,7 @@
-*{
-    margin:0px auto;
-}
 
 h1{
+    padding: 40px 0px;
     color: rgb(95, 172, 223);
     font-size: 25px;
+    text-align: center;
 }
