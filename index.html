@@ -6,22 +6,39 @@
     <link rel="StyleSheet" href="index.css" type="text/css">
     <title>Perfil</title>
 </head>
-<body onresize="ajustarTamaño()">
+<body onload="ajustarTamaño()" onresize="ajustarTamaño()">
 
-    <div class="menu" id="menu">
-        <ul>
+    <header id="menu">
+        <div class="cont_img" id="cont_img">
+            <img id="img_menu" class="img_menu" src="menu.png" onclick="expandirMenu()" />
+        </div>
+
+        <ul class="lista" id="lista">
             <li><a href="/index.html">Inicio</a></li>
             <li><a href="/proyects.html">Proyectos</a></li>
             <li><a href="/contact.html">Contacto</a></li>
         </ul>
-    </div>
 
+        <ul class="lista_lateral" id="lista_lateral">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/proyects.html">Proyectos</a></li>
+            <li><a href="/contact.html">Contacto</a></li>
+        </ul>
+    </header>
 
-    <h1 class="titulo" id="titulo">Biografia</h1><br>
+    <section class="main">
+        <h1 class="titulo" id="titulo">Biografia</h1><br>
 
-    <h3 class="texto" id="subtitulo">Analista de Sistemas</h3>
+        <h3 class="subtitulo" id="subtitulo">Tecnico Analista de Sistemas</h3>
 
-    <p class="texto" id="texto">En los tiempos libres realizo proyectos con arduino, esp8266 y esp32</p>
+        <p class="texto" id="texto">En los tiempos libres realizo proyectos con arduino, esp8266 y esp32</p>
+    </section>
+
+</br>
+
+    <footer>
+        <p><strong>Todos los derechos reservador 2010-2020</strong></p>
+    </footer>
 
     <script src="index.js" ></script>
 </body>

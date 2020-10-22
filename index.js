@@ -1,20 +1,40 @@
+var cont_img = document.getElementById("cont_img");
+var lista = document.getElementById("lista");
+var lista_lateral = document.getElementById("lista_lateral");
+var estadoPrecionado = false;
 
 function ajustarTamaño(){
-    let menu = document.getElementById("menu");
-    let titulo = document.getElementById("titulo");
-    let sub = document.getElementById("subtitulo");
-    let texto = document.getElementById("texto");
 
-    if(menu.clientWidth < 600){
-        menu.style = "font-size:5vw;";
-        titulo.style = "font-size:6vw;";
-        sub.style = "font-size:4vw;";
-        texto.style = "font-size:4vw;";
+    if(document.body.clientWidth <= 1000){
+        mostrarMenuLateral();
     }
     else{
-        menu.style = "font-size:20px;";
-        titulo.style = "font-size:30px;";
-        sub.style = "font-size:18px;";
-        texto.style = "font-size:16px;";
+        esconderMenuLateral();
+    }
+}
+
+function mostrarMenuLateral(){
+    cont_img.style = "display:block;";
+    lista.style = "display:none;";
+    lista_lateral.style = "display:none;"
+}
+
+function esconderMenuLateral(){
+    cont_img.style = "display:none;";
+    lista.style = "display:block;";
+    lista_lateral.style = "display:none;"
+}
+
+
+
+function expandirMenu(){
+
+    estadoPrecionado = !estadoPrecionado;
+
+    if(estadoPrecionado == false){
+        lista_lateral.style = "display:none;"
+    }
+    else{
+        lista_lateral.style = "display:block;"
     }
 }

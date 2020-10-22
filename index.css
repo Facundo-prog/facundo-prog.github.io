@@ -5,65 +5,105 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.main, footer, header{
+    max-width: 1000px;
+    margin:0px auto;
+    text-align: center;
+}
+
+.img_menu{
+    width: 35px;
+    display: block;
+    padding:10px;
+    margin:0px;
+    background-color: rgb(189, 189, 189);
+}
+
+.cont_img{
+    width: 100%;
+    background-color: rgb(189, 189, 189);
+    padding:0px;
+    margin:0px;
+}
+
+
+ul{
+    list-style-type: none;
+}
+
+.lista{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    margin:0px;
+    padding:0px;
+    background-color: rgb(189, 189, 189);
+    text-align: left;
+}
+
+.lista li{
+    display: inline-block;
+    margin:0px;
+}
+
+.lista li a{
+    display: inline-block;
+    text-decoration: none;
+    color:#000;
+    font-size: 18px;
+    padding:10px 20px;
+    margin:0px;
+}
+
+.lista li a:hover{
+    display: inline-block;
+    background-color:rgb(129, 129, 129);
+}
+
+
+.lista_lateral{
+    position: absolute;
+    width: auto;
+    margin:0px;
+    padding:0px;
+    background-color: rgb(189, 189, 189);
+    text-align: left;
+}
+
+.lista_lateral li{
+    display: block;
+}
+
+.lista_lateral li a{
+    display: block;
+    text-decoration: none;
+    padding:10px 20px;
+    font-size: 18px;
+    color:#000;
+}
+
 
 .titulo{
     display:block;
-    position:relative;
-    text-align: left;
-    padding:15px 0px 0px 0px;
+    font-size: 30px;
+    padding-top:20px;
     color:rgb(24, 138, 231);
-    clear: both;
-    margin:5px 20px;
-}
-
-.texto{
-    margin:5px 20px;
-    font-size: 16px;
-}
-
-
-.menu{
-    display:inline-block;
-    width:100%;
     margin:0px;
-    padding:0px;
-    background-color: rgb(189, 189, 189);
-    position:relative;
-    top:0px;
-    left:0px;
+}
+
+.subtitulo{
+    margin:0px;
     font-size: 20px;
 }
 
-
-ul {
-    padding:0px;
+.texto{
     margin:0px;
-    position:relative;
+    font-size: 16px;
 }
 
-
-ul li{
-    position: relative;
-    display:block;
-    float:left;
-    margin:0;
-    background-color: rgb(189, 189, 189);
-    padding:10px 0px;
-}
-
-
-ul li:hover{
-    position: relative;
-    display:block;
-    float:left;
-    margin:0;
-    background-color:rgb(129, 129, 129);
-    padding:10px 0px;
-}
-
-
-ul li a{
-    color:#000;
-    text-decoration: none;
-    padding:10px 20px;
+footer{
+    background-color: #000;
+    color:#fff;
+    font-size: 14px;
 }
