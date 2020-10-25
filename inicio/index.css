@@ -16,7 +16,7 @@ body{
 }
 
 .img_menu{
-    width: 30px;
+    width: 32px;
     display: block;
     padding:10px;
     margin:0px;
@@ -54,7 +54,7 @@ ul{
 .lista li a{
     display: inline-block;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2em;
     padding:10px 20px;
     margin:0px;
     color:var(--colorMenu);
@@ -90,7 +90,7 @@ ul{
 
 .titulo{
     display:block;
-    font-size: 30px;
+    font-size: 1.8em;
     padding-top:20px;
     color:rgb(52, 133, 199);
     margin:0px;
@@ -106,8 +106,8 @@ ul{
 }
 
 .proyecto{
-    width: 200px;
-    height: 200px;
+    width: 12em;
+    height: 12em;
     display:inline-block;
     margin:10px;
     padding:0px;
@@ -135,5 +135,5 @@ footer{
 }
 
 .texto_footer{
-    padding:8px;
+    padding:6px;
 }

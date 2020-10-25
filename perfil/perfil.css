@@ -1,17 +1,10 @@
 
-.titulo{
-    display:block;
-    font-size: 30px;
-    padding-top:20px;
-    margin:0px;
-}
-
 .subtitulo{
     margin:0px;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .texto{
     margin:0px;
-    font-size: 16px;
+    font-size: 1em;
 }
