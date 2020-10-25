@@ -1,5 +1,9 @@
 body{
-    background-color: rgb(255, 255, 255);
+    --colorMenu:rgb(59, 59, 59);/*rgb(255, 255, 255);*/
+    --fondoClaro: rgb(250, 110, 45);/*rgb(172, 171, 171);*/
+    --fondoOscuro:rgb(255, 143, 92);/*rgb(128, 128, 128);*/
+
+    background-color:rgb(231, 231, 231);/*rgb(231, 231, 231);*/
     margin:0px;
     padding:0px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -16,12 +20,12 @@ body{
     display: block;
     padding:10px;
     margin:0px;
-    background-color: rgb(189, 189, 189);
+
 }
 
 .cont_img{
     width: 100%;
-    background-color: rgb(189, 189, 189);
+    background-color:var(--fondoClaro);
     padding:0px;
     margin:0px;
 }
@@ -38,7 +42,7 @@ ul{
     width: 100%;
     margin:0px;
     padding:0px;
-    background-color: rgb(189, 189, 189);
+    background-color: var(--fondoClaro);
     text-align: left;
 }
 
@@ -50,15 +54,15 @@ ul{
 .lista li a{
     display: inline-block;
     text-decoration: none;
-    color:#000;
     font-size: 18px;
     padding:10px 20px;
     margin:0px;
+    color:var(--colorMenu);
 }
 
 .lista li a:hover{
     display: inline-block;
-    background-color:rgb(129, 129, 129);
+    background-color:var(--fondoOscuro);
 }
 
 
@@ -67,7 +71,7 @@ ul{
     width: auto;
     margin:0px;
     padding:0px;
-    background-color: rgb(129, 129, 129);
+    background-color: var(--fondoOscuro);
     text-align: left;
 }
 
@@ -79,8 +83,8 @@ ul{
     display: block;
     text-decoration: none;
     padding:10px 20px;
-    font-size: 18px;
-    color:#000;
+    font-size: 1.2em;
+    color:var(--colorMenu);
 }
 
 
@@ -88,7 +92,7 @@ ul{
     display:block;
     font-size: 30px;
     padding-top:20px;
-    color:rgb(24, 138, 231);
+    color:rgb(52, 133, 199);
     margin:0px;
 }
 
@@ -125,8 +129,8 @@ ul{
 }
 
 footer{
-    background-color: #000;
-    color:#fff;
+    background-color:var(--colorMenu);
+    color:var(--fondoOscuro);
     font-size: 1em;
 }
 

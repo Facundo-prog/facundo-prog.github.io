@@ -5,6 +5,8 @@ var estadoPrecionado = false;
 
 function ajustarTamaño(){
 
+    estadoPrecionado = false;
+
     if(document.body.clientWidth <= 1000){
         mostrarMenuLateral();
     }
@@ -36,4 +38,9 @@ function expandirMenu(){
     else{
         lista_lateral.style = "display:block;"
     }
+}
+
+
+function openLink(id){
+    console.log(id);
 }
