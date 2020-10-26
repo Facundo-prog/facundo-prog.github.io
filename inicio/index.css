@@ -112,6 +112,7 @@ ul{
     margin:10px;
     padding:0px;
     overflow: hidden;
+    border:1px solid #000;
 }
 
 .img_proyecto{
