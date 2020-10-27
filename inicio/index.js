@@ -3,10 +3,12 @@ var lista = document.getElementById("lista");
 var lista_lateral = document.getElementById("lista_lateral");
 var estadoPrecionado = false;
 var reposOrdenados = [];
+var quantityRepos = 0;
 
 function ajustarTamaño(){
 
     estadoPrecionado = false;
+    lista_lateral.style = "display:none;"
 
     if(document.body.clientWidth <= 1000){
         mostrarMenuLateral();
@@ -17,17 +19,13 @@ function ajustarTamaño(){
 }
 
 function mostrarMenuLateral(){
-    document.body.style = "font-size:18px;";
     cont_img.style = "display:block;";
     lista.style = "display:none;";
-    lista_lateral.style = "display:none;"
 }
 
 function esconderMenuLateral(){
-    document.body.style = "font-size:;";
     cont_img.style = "display:none;";
     lista.style = "display:block;";
-    lista_lateral.style = "display:none;"
 }
 
 
@@ -59,21 +57,29 @@ function getRepositorie() {
 }
   
 function showListRepos(user) {
+    let listDiv;
+    let listName;
+    let listDesc;
+    let textName;
+    let textDesc;
     let listFather = document.getElementById("cont_proyecto");
-    let repos = user.length - 1;
+    quantityRepos = user.length - 1;
     reposOrdenados = lastRepo(user);
 
-    //console.log(reposOrdenados);
+    for(let i=quantityRepos;i > quantityRepos-8 && i >= 0;i--){
+        listDiv = document.createElement("div");
+        listName = document.createElement("p");
+        listDesc = document.createElement("p");
+        textName = document.createTextNode(textDecoder(reposOrdenados[i][1]));
 
-    for(let i=repos;i > repos-8 && i >= 0;i--){
-        let listDiv = document.createElement("div");
-        let listName = document.createElement("p");
-        let listDesc = document.createElement("p");
-        let textName = document.createTextNode(textDecoder(reposOrdenados[i][1]));
-        let textDesc = document.createTextNode(reposOrdenados[i][3]);
+        if(reposOrdenados[i][3] != "null"){
+            textDesc = document.createTextNode(reposOrdenados[i][3]);
+        }
+        else{
+            textDesc = document.createTextNode("No description");
+        }
 
         listName.appendChild(textName);
-        listName.setAttribute("href","http://google.com");
         listDesc.appendChild(textDesc);
         listName.setAttribute("class","texto_proyecto");
         listDesc.setAttribute("class","desc_proyecto");
@@ -105,7 +111,8 @@ function lastRepo(user){
     
     for(let i=0;i < user.length;i++){
         let fecha = user[i].pushed_at;
-        let cadenaTemporal = fecha.slice(0, -10) + "|" + user[i].name + "|" + user[i].html_url + "|" + String(user[i].description).substring(0,100)
+        let cadenaTemporal = fecha.slice(0, -10) + "|" + user[i].name + "|" + user[i].html_url + "|" + String(user[i].description).substring(0,100);
+    
         arrayFechaRepos[i] = cadenaTemporal.split("|");
     }
 

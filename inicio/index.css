@@ -1,3 +1,7 @@
+html{
+    font-size:16px;
+}
+
 body{
     --colorMenu:rgb(59, 59, 59);/*rgb(255, 255, 255);*/
     --fondoClaro:rgb(255, 143, 92);/*rgb(172, 171, 171);*/
@@ -20,7 +24,6 @@ body{
     display: block;
     padding:10px;
     margin:0px;
-
 }
 
 .cont_img{
@@ -54,7 +57,7 @@ ul{
 .lista li a{
     display: inline-block;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     padding:10px 20px;
     margin:0px;
     color:var(--colorMenu);
@@ -83,14 +86,14 @@ ul{
     display: block;
     text-decoration: none;
     padding:10px 20px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color:var(--colorMenu);
 }
 
 
 .titulo{
     display:block;
-    font-size: 1.8em;
+    font-size: 1.8rem;
     padding-top:20px;
     color:rgb(52, 133, 199);
     margin:0px;
@@ -106,41 +109,37 @@ ul{
 }
 
 .proyecto{
-    width: 12em;
-    height: 12em;
+    width: 12rem;
+    height: 8rem;
     display:inline-block;
-    margin:10px;
+    margin:1vw;
     padding:0px;
-    overflow: hidden;
+    overflow:hidden;
     border:1px solid #000;
-}
-
-.img_proyecto{
-    display:block;
-    width: 100%;
-    max-height: 80%;
+    vertical-align:top;
 }
 
 .texto_proyecto{
     display:block;
     padding:0px;
     margin:5px;
-    font-size: 1em;
+    font-size: 1rem;
     color:#000;
 }
 
 .desc_proyecto{
-    display:block;
+    display:inline-block;
     padding:0px;
     margin:5px;
-    font-size: 1em;
+    margin-top: 10px;
+    font-size: 1rem;
     color:var(--fondoOscuro);
 }
 
 footer{
     background-color:var(--colorMenu);
     color:var(--fondoOscuro);
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .texto_footer{
