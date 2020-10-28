@@ -48,25 +48,29 @@ function openLink(id){
 }
 
 
-function getRepositorie() {
+function getRepositorie(cantidad) {
     let request = new XMLHttpRequest();
     let search = "guillermo-gerard";
     request.open("GET", "https://api.github.com/users/" + search + "/repos", true);
-    request.onload = () => showListRepos(JSON.parse(request.responseText));
+    request.onload = () => showListRepos(JSON.parse(request.responseText), cantidad);
     request.send();
 }
   
-function showListRepos(user) {
+function showListRepos(user, value) {
     let listDiv;
     let listName;
     let listDesc;
     let textName;
     let textDesc;
     let listFather = document.getElementById("cont_proyecto");
+    let cantidad = value;
+
     quantityRepos = user.length - 1;
     reposOrdenados = lastRepo(user);
 
-    for(let i=quantityRepos;i > quantityRepos-8 && i >= 0;i--){
+    if(cantidad == 0){cantidad = quantityRepos+1;}
+
+    for(let i=quantityRepos;i > quantityRepos-cantidad && i >= 0;i--){
         listDiv = document.createElement("div");
         listName = document.createElement("p");
         listDesc = document.createElement("p");
