@@ -1,2 +1,36 @@
 
+.cont_proyecto{
+    display:inline-block;
+    margin:0px;
+    padding:0px;
+}
 
+.proyecto{
+    width: 12rem;
+    height: 10rem;
+    display:inline-block;
+    margin:1vw;
+    padding:0px;
+    overflow:hidden;
+    background-color: rgb(194, 194, 194);
+    border-radius: 3px;
+    vertical-align:top;
+}
+
+.texto_proyecto{
+    display:block;
+    padding:4px;
+    margin:0px;
+    font-size: 1rem;
+    color:#fff;
+    background-color: rgb(59, 59, 59);
+}
+
+.desc_proyecto{
+    display:inline-block;
+    padding:0px;
+    margin:5px;
+    margin-top: 10px;
+    font-size: 1rem;
+    color:#000;
+}

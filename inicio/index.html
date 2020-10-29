@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="index.css" type="text/css">
+    <script src="/clases/repos.js"></script>
+    <script src="/clases/autoSize.js"></script>
     <title>Inicio</title>
 </head>
-<body onresize="ajustarTamaño()" onload="ajustarTamaño(),getRepositorie(8)">
+<body onresize="size.ajustarTamaño()" onload="size.ajustarTamaño(),getRepos()">
 
     <header id="menu">
         <div class="cont_img" id="cont_img">
-            <img id="img_menu" class="img_menu" src="menu.png" onclick="expandirMenu()" />
+            <img id="img_menu" class="img_menu" src="menu.png" onclick="size.expandirMenu()" />
         </div>
 
         <ul class="lista" id="lista">
@@ -26,7 +28,7 @@
         </ul>
     </header>
 
-    <section class="main">
+    <section class="main" onclick="listRepos(8)">
         <h1 class="titulo" id="titulo">Proyectos recientes</h1><br>
         
         <section class="cont_proyecto" id="cont_proyecto"></section>

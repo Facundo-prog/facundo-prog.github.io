@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="/inicio/index.css" type="text/css">
-    <link rel="StyleSheet" href="proyectos.css" type="text/css">
+    <link rel="StyleSheet" href="/proyectos/proyectos.css" type="text/css">
+    <script src="/clases/repos.js"></script>
+    <script src="/clases/autoSize.js"></script>
     <title>Proyectos</title>
 </head>
-<body onload="ajustarTamaño(), getRepositorie(0)" onresize="ajustarTamaño()">
+<body onload="size.ajustarTamaño(), getRepos()" onresize="size.ajustarTamaño()">
 
     <header id="menu">
         <div class="cont_img" id="cont_img">
-            <img id="img_menu" class="img_menu" src="/inicio/menu.png" onclick="expandirMenu()" />
+            <img id="img_menu" class="img_menu" src="/inicio/menu.png" onclick="size.expandirMenu()" />
         </div>
 
         <ul class="lista" id="lista">
@@ -38,6 +40,6 @@
         <p class="texto_footer"><strong>Redes sociales</strong></p>
     </footer>
 
-    <script src="/inicio/index.js" ></script>
+    <script src="/proyectos/proyectos.js" ></script>
 </body>
 </html>
