@@ -1,7 +1,6 @@
 const size = new autoAdjustSize(1000, "cont_img", "lista", "lista_lateral");
 const repos = new repository("guillermo-gerard", 8);//quantityGetRepos 0 = todos
 
-
 function getArrayRepos(quantityReturnRepos){
     let request = new XMLHttpRequest();
 
