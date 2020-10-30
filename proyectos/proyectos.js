@@ -1,31 +1,15 @@
-const repos = new repository("guillermo-gerard");
-const size = new autoAdjustSize(1000, "cont_img", "lista", "lista_lateral");
-var reposOrdenados = [];
-var user = [];
-
-function getRepos(){
-    repos.getRepos();
-    setTimeout(listRepos,1000);
-}
+const s = new autoAdjustSize(1000, "cont_img", "lista", "lista_lateral");
+const r = new repository("guillermo-gerard", 0);//quantityGetRepos 0 = todos
 
 
-function openLink(id){
-    let host = reposOrdenados[id][2];
-    window.location = host;
-}
+function getArrayRepos(quantityReturnRepos){
+    let request = new XMLHttpRequest();
 
-function listRepos(){
-
-    if(user.length > 0){
-
-        reposOrdenados = repos.lastRepo(user);
-        showRepos(0);
+    request.open("GET", "https://api.github.com/users/" + r.user + "/repos", true);
+    request.onload = () =>{ 
+        r.setArrayUser(JSON.parse(request.responseText)); 
+        r.lastRepo();
+        r.showRepos(quantityReturnRepos,"cont_proyecto","texto_proyecto","desc_proyecto","proyecto");
     }
-    else{
-        alert("Ups! El repositorio solisitado no esta disponible");
-    }
-}
-
-function showRepos(quantity){
-    repos.showRepos(quantity,(user.length-1),"cont_proyecto","texto_proyecto","desc_proyecto","proyecto");
+    request.send();
 }

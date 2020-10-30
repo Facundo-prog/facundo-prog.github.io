@@ -1,71 +1,68 @@
-
 class repository{
-    constructor(user){
+    constructor(user, quantityGetRepos){
         this.user = user;
+        this.sizeGetRepos = quantityGetRepos;
+        this.arrayUser = [];
+        this.arrayRepos = [];
     }
 
-    getRepos(){
-        let request = new XMLHttpRequest();
-
-        request.open("GET", "https://api.github.com/users/" + this.user + "/repos", true);
-        request.onload = () =>{ user = JSON.parse(request.responseText); }
-        request.send();
+    setArrayUser(value){
+        this.arrayUser = value;
     }
 
-    lastRepo(user){
+    lastRepo(){
         let arrayFechaRepos = [];
+        let user = this.arrayUser;
+        let arrayTexto = [];
+        let textoFinal = "";
         
         for(let i=0;i < user.length;i++){
             let fecha = user[i].pushed_at;
             let cadenaTemporal = fecha.slice(0, -10) + "|";
-            cadenaTemporal += user[i].name + "|";
+
+            arrayTexto = String(user[i].name).split("_");
+            textoFinal = arrayTexto.join(" ");
+            cadenaTemporal += textoFinal.substring(0,50) + "|";
+
             cadenaTemporal += user[i].html_url + "|";
             cadenaTemporal += String(user[i].description).substring(0,125) + "|";
             cadenaTemporal += user[i].language;
-        
+
             arrayFechaRepos[i] = cadenaTemporal.split("|");
         }
     
         arrayFechaRepos.sort(function (a, b){
             return new Date(a[0]) - new Date(b[0]);
         });
-        return arrayFechaRepos;
+        this.arrayRepos = arrayFechaRepos;
     }
 
-    textDecoder(texto){
-        let arrayTexto = [];
-        let textoFinal = "";
-        
-        arrayTexto = texto.split("_");
-        textoFinal = arrayTexto.join(" ");
-        
-        return textoFinal;
-    }
-
-    showRepos(quantity,quantityRepos,id_cont_proyecto,class_listName,class_listDesc,class_listDiv){
+    showRepos(quantity,id_cont_proyecto,class_listName,class_listDesc,class_listDiv){
         let listFather = document.getElementById(id_cont_proyecto);
         let listDiv;
         let listName;
         let listDesc;
         let textName;
         let textDesc;
+        let quantityRepos = this.arrayUser.length-1;
+        let quantityGetRepos = this.sizeGetRepos;
     
-        if(quantity == 0){quantity = quantityRepos+1;}
+        if(this.sizeGetRepos == 0){quantityGetRepos = quantityRepos+1;}
     
-        for(let i=quantityRepos;i > quantityRepos-quantity && i >= 0;i--){
+        for(let i=quantityRepos;i > quantityRepos-quantityGetRepos && i >= 0;i--){
             listDiv = document.createElement("div");
             
             listName = document.createElement("p");
             listDesc = document.createElement("p");
-            textName = document.createTextNode(repos.textDecoder(reposOrdenados[i][1]));
+            textName = document.createTextNode(this.arrayRepos[i][1]);
     
-            if(reposOrdenados[i][3] != "null"){
+            if(this.arrayRepos[i][3] != "null"){
 
-                if(reposOrdenados[i][3].length >= 125){
-                    textDesc = document.createTextNode(reposOrdenados[i][3] + " ...");
+                if(this.arrayRepos[i][3].length >= 125){
+                    textDesc = document.createTextNode(this.arrayRepos[i][3] + " ...");
                 }
                 else{
-                    textDesc = document.createTextNode(reposOrdenados[i][3]);
+                    textDesc = document.createTextNode(this.arrayRepos[i][3]);
                 }
             }
             else{
@@ -84,6 +81,5 @@ class repository{
             listFather.appendChild(listDiv);
         }
     }
-
 
 }
