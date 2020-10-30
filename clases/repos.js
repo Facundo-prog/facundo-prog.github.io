@@ -47,7 +47,7 @@ class repository{
         let quantityRepos = this.arrayUser.length-1;
         let quantityGetRepos = this.sizeGetRepos;
     
-        if(this.sizeGetRepos == 0){quantityGetRepos = quantityRepos+1;}
+        if(this.sizeGetRepos == -1){quantityGetRepos = quantityRepos+1;}
     
         for(let i=quantityRepos;i > quantityRepos-quantityGetRepos && i >= 0;i--){
             listDiv = document.createElement("div");

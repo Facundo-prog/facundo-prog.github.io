@@ -1,5 +1,5 @@
 const size = new autoAdjustSize(1000, "cont_img", "lista", "lista_lateral");
-const repos = new repository("guillermo-gerard", 0);//quantityGetRepos 0 = todos
+const repos = new repository("guillermo-gerard", -1);//quantityGetRepos -1 = todos
 
 
 function getArrayRepos(quantityReturnRepos){
