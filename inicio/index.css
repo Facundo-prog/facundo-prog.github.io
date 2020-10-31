@@ -40,8 +40,7 @@ ul{
 
 .lista{
     position: relative;
-    top: 0px;
-    left: 0px;
+    display: inline-block;
     width: 100%;
     margin:0px;
     padding:0px;
@@ -70,40 +69,47 @@ ul{
 
 
 .lista_lateral{
-    position: absolute;
+    position: relative;
+    display: inline-block;
     width: auto;
     margin:0px;
     padding:0px;
-    background-color: var(--fondoOscuro);
     text-align: left;
 }
 
 .lista_lateral li{
     display: block;
+    margin:1px 0px;
+    padding: 0px;
+    background-color: var(--fondoOscuro);
 }
 
 .lista_lateral li a{
     display: block;
     text-decoration: none;
-    padding:10px 20px;
+    padding: 10px 20px;
+    margin:0px;
     font-size: 1.2rem;
     color:#000;
 }
 
 
+
+
 .titulo{
     display:block;
     font-size: 1.8rem;
-    padding-top:20px;
+    margin-top:30px;
+    margin-bottom: 0px;
+    padding:0px;
     color:rgb(52, 133, 199);
-    margin:0px;
 }
 
 
 
 
 .cont_proyecto{
-    display:inline-block;
+    display:block;
     margin:0px;
     padding:0px;
 }
@@ -118,6 +124,7 @@ ul{
     background-color: rgb(194, 194, 194);
     border-radius: 3px;
     vertical-align:top;
+    position: relative;
 }
 
 .texto_proyecto{
@@ -130,12 +137,21 @@ ul{
 }
 
 .desc_proyecto{
-    display:inline-block;
+    display:block;
     padding:0px;
     margin:5px;
     margin-top: 10px;
     font-size: 1rem;
     color:#000;
+}
+
+.lenguaje_proyecto{
+    position: absolute;
+    padding:0px;
+    margin: 10px;
+    font-size: 0.8rem;
+    color:rgb(189, 0, 0);
+    bottom: 0px;
 }
 
 footer{

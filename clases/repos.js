@@ -26,7 +26,7 @@ class repository{
 
             cadenaTemporal += user[i].html_url + "|";
             cadenaTemporal += String(user[i].description).substring(0,125) + "|";
-            cadenaTemporal += user[i].language;
+            if(user[i].language == null){ cadenaTemporal += "No language" }else{ cadenaTemporal += user[i].language; }
 
             arrayFechaRepos[i] = cadenaTemporal.split("|");
         }
@@ -37,13 +37,15 @@ class repository{
         this.arrayRepos = arrayFechaRepos;
     }
 
-    showRepos(quantity,id_cont_proyecto,class_listName,class_listDesc,class_listDiv){
+    showRepos(id_cont_proyecto,class_listName,class_listDesc,class_listLenguaje,class_listDiv){
         let listFather = document.getElementById(id_cont_proyecto);
         let listDiv;
         let listName;
         let listDesc;
+        let listLenguaje;
         let textName;
         let textDesc;
+        let textLenguaje;
         let quantityRepos = this.arrayUser.length-1;
         let quantityGetRepos = this.sizeGetRepos;
     
@@ -54,6 +56,7 @@ class repository{
             
             listName = document.createElement("p");
             listDesc = document.createElement("p");
+            listLenguaje = document.createElement("p");
             textName = document.createTextNode(this.arrayRepos[i][1]);
     
             if(this.arrayRepos[i][3] != "null"){
@@ -68,13 +71,18 @@ class repository{
             else{
                 textDesc = document.createTextNode("No description");
             }
+
+            textLenguaje = document.createTextNode(this.arrayRepos[i][4]);
     
             listName.appendChild(textName);
             listDesc.appendChild(textDesc);
+            listLenguaje.appendChild(textLenguaje);
             listName.setAttribute("class",class_listName);
             listDesc.setAttribute("class",class_listDesc);
+            listLenguaje.setAttribute("class",class_listLenguaje);
             listDiv.appendChild(listName);
             listDiv.appendChild(listDesc);
+            listDiv.appendChild(listLenguaje);
             listDiv.setAttribute("class",class_listDiv);
             listDiv.setAttribute("onclick","openLink(id)");
             listDiv.setAttribute("id", String(i));
