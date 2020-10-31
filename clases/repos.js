@@ -26,7 +26,7 @@ class repository{
 
             cadenaTemporal += user[i].html_url + "|";
             cadenaTemporal += String(user[i].description).substring(0,125) + "|";
-            if(user[i].language == null){ cadenaTemporal += "No language" }else{ cadenaTemporal += user[i].language; }
+            if(user[i].language == null){ cadenaTemporal += "" }else{ cadenaTemporal += user[i].language; }
 
             arrayFechaRepos[i] = cadenaTemporal.split("|");
         }
@@ -69,7 +69,7 @@ class repository{
                 }
             }
             else{
-                textDesc = document.createTextNode("No description");
+                textDesc = document.createTextNode("Sin descripción");
             }
 
             textLenguaje = document.createTextNode(this.arrayRepos[i][4]);

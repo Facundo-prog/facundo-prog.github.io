@@ -12,3 +12,8 @@ function getArrayRepos(){
     }
     request.send();
 }
+
+
+function openLink(id){
+    window.location = repos.arrayRepos[id][2];
+}

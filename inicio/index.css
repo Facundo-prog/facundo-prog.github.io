@@ -100,7 +100,6 @@ ul{
     display:block;
     font-size: 1.8rem;
     margin-top:30px;
-    margin-bottom: 0px;
     padding:0px;
     color:rgb(52, 133, 199);
 }
@@ -125,6 +124,10 @@ ul{
     border-radius: 3px;
     vertical-align:top;
     position: relative;
+}
+
+.proyecto:hover{
+    box-shadow:3px 3px var(--colorMenu);
 }
 
 .texto_proyecto{
