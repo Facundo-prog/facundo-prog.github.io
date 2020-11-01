@@ -163,8 +163,6 @@ footer{
     background-color:var(--colorMenu);
     color:var(--fondoClaro);
     font-size: 1rem;
-}
-
-.texto_footer{
     padding:6px;
+    margin:5px auto;
 }
