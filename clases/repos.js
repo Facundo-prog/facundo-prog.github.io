@@ -25,7 +25,7 @@ class repository{
             cadenaTemporal += textoFinal.substring(0,50) + "|";
 
             cadenaTemporal += user[i].html_url + "|";
-            cadenaTemporal += String(user[i].description).substring(0,125) + "|";
+            cadenaTemporal += String(user[i].description).substring(0,120) + "|";
             if(user[i].language == null){ cadenaTemporal += "Indefinido" }else{ cadenaTemporal += String(user[i].language).toUpperCase(); }
 
             arrayFechaRepos[i] = cadenaTemporal.split("|");
@@ -61,7 +61,7 @@ class repository{
     
             if(this.arrayRepos[i][3] != "null"){
 
-                if(this.arrayRepos[i][3].length >= 125){
+                if(this.arrayRepos[i][3].length >= 120){
                     textDesc = document.createTextNode(this.arrayRepos[i][3] + " ...");
                 }
                 else{
