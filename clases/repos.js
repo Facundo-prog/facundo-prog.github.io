@@ -26,7 +26,7 @@ class repository{
 
             cadenaTemporal += user[i].html_url + "|";
             cadenaTemporal += String(user[i].description).substring(0,125) + "|";
-            if(user[i].language == null){ cadenaTemporal += "" }else{ cadenaTemporal += user[i].language; }
+            if(user[i].language == null){ cadenaTemporal += "Indefinido" }else{ cadenaTemporal += String(user[i].language).toUpperCase(); }
 
             arrayFechaRepos[i] = cadenaTemporal.split("|");
         }
@@ -84,6 +84,7 @@ class repository{
             listDiv.appendChild(listDesc);
             listDiv.appendChild(listLenguaje);
             listDiv.setAttribute("class",class_listDiv);
+            listDiv.setAttribute("alt","proyecto");
             listDiv.setAttribute("onclick","openLink(id)");
             listDiv.setAttribute("id", String(i));
             listFather.appendChild(listDiv);

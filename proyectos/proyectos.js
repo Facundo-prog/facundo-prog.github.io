@@ -1,7 +1,6 @@
 const size = new autoAdjustSize(1000, "cont_img", "lista", "lista_lateral");
 const repos = new repository("guillermo-gerard", -1);//quantityGetRepos -1 = todos
 
-
 function getArrayRepos(){
     let request = new XMLHttpRequest();
 
@@ -12,4 +11,8 @@ function getArrayRepos(){
         repos.showRepos("cont_proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto","proyecto");
     }
     request.send();
+}
+
+function openLink(id){
+    window.location = repos.arrayRepos[id][2];
 }

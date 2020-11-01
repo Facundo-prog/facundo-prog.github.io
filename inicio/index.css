@@ -150,10 +150,12 @@ ul{
 
 .lenguaje_proyecto{
     position: absolute;
-    padding:0px;
+    padding:2.4px;
     margin: 10px;
     font-size: 0.8rem;
-    color:rgb(189, 0, 0);
+    color:#fff;
+    background-color: var(--colorMenu);
+    border-radius:5px;
     bottom: 0px;
 }
 
