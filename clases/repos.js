@@ -84,7 +84,6 @@ class repository{
             listDiv.appendChild(listDesc);
             listDiv.appendChild(listLenguaje);
             listDiv.setAttribute("class",class_listDiv);
-            listDiv.setAttribute("alt","proyecto");
             listDiv.setAttribute("onclick","openLink(id)");
             listDiv.setAttribute("id", String(i));
             listFather.appendChild(listDiv);

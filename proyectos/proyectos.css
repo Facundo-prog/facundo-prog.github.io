@@ -1,0 +1,17 @@
+body{
+    --fondoOscuro:rgb(250, 110, 45);
+}
+
+
+.proyecto{
+    width: 85%;
+    height: 8rem;
+    display:inline-block;
+    margin:1vw;
+    padding:0px;
+    overflow:hidden;
+    background-color: rgb(194, 194, 194);
+    border-radius: 3px;
+    vertical-align:top;
+    position: relative;
+}
