@@ -99,7 +99,7 @@ ul{
 .titulo{
     display:block;
     font-size: 1.8rem;
-    margin-top:30px;
+    margin-top:50px;
     padding:0px;
     color:rgb(52, 133, 199);
 }
@@ -180,6 +180,6 @@ footer{
     color:var(--fondoClaro);
     font-size: 1rem;
     padding:6px 0px;
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 10px;
 }
