@@ -1,7 +1,7 @@
 class repository{
-    constructor(user, quantityGetRepos){
+    constructor(user, sizeGetRepos){
         this.user = user;
-        this.sizeGetRepos = quantityGetRepos;
+        this.sizeGetRepos = sizeGetRepos;
         this.arrayUser = [];
         this.arrayRepos = [];
     }
@@ -47,11 +47,11 @@ class repository{
         let textDesc;
         let textLenguaje;
         let quantityRepos = this.arrayUser.length-1;
-        let quantityGetRepos = this.sizeGetRepos;
+        let sizeGetRepos = this.sizeGetRepos;
+
+        if(this.sizeGetRepos == -1){ sizeGetRepos = quantityRepos; }
     
-        if(this.sizeGetRepos == -1){quantityGetRepos = quantityRepos+1;}
-    
-        for(let i=quantityRepos;i > quantityRepos-quantityGetRepos && i >= 0;i--){
+        for(let i=quantityRepos;i >= 0;i--){
             listDiv = document.createElement("div");
             
             listName = document.createElement("p");
@@ -86,6 +86,11 @@ class repository{
             listDiv.setAttribute("class",class_listDiv);
             listDiv.setAttribute("onclick","openLink(id)");
             listDiv.setAttribute("id", String(i));
+
+            if(i <= quantityRepos-sizeGetRepos){
+                listDiv.setAttribute("style","display:none;");
+            }
+
             listFather.appendChild(listDiv);
         }
     }

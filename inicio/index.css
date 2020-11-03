@@ -159,6 +159,23 @@ ul{
     bottom: 0px;
 }
 
+
+.boton_mostrarTodo{
+    display: inline-block;
+    margin:10px auto;
+    padding: 4px;
+    font-size: 1rem;
+    background-color:var(--fondoOscuro);
+    color:#000;
+    border-radius: 3px;
+}
+
+.boton_mostrarTodo:hover{
+    box-shadow: 3px 3px var(--colorMenu);
+}
+
+
+
 footer{
     background-color:var(--colorMenu);
     color:var(--fondoClaro);
