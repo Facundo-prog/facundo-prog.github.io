@@ -162,7 +162,7 @@ ul{
 
 .boton_mostrarTodo{
     display: inline-block;
-    margin:10px auto;
+    margin:20px auto;
     padding: 4px;
     font-size: 1rem;
     background-color:var(--fondoOscuro);
@@ -175,11 +175,10 @@ ul{
 }
 
 
-
 footer{
     background-color:var(--colorMenu);
     color:var(--fondoClaro);
     font-size: 1rem;
-    padding:6px;
+    padding:6px 0px;
     margin:5px auto;
 }
