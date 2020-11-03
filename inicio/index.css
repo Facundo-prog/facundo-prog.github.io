@@ -180,5 +180,6 @@ footer{
     color:var(--fondoClaro);
     font-size: 1rem;
     padding:6px 0px;
-    margin:5px auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
 }
