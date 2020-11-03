@@ -10,7 +10,7 @@ body{
     background-color:rgb(231, 231, 231);/*rgb(231, 231, 231);*/
     margin:0px;
     padding:0px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: sans-serif,Helvetica;
 }
 
 .main, footer, header{
@@ -28,7 +28,7 @@ body{
 
 .cont_img{
     width: 100%;
-    background-color:var(--fondoClaro);
+    background-color:var(--fondoOscuro);
     padding:0px;
     margin:0px;
 }
@@ -44,7 +44,7 @@ ul{
     width: 100%;
     margin:0px;
     padding:0px;
-    background-color: var(--fondoClaro);
+    background-color: var(--fondoOscuro);
     text-align: left;
 }
 
@@ -64,7 +64,7 @@ ul{
 
 .lista li a:hover{
     display: inline-block;
-    background-color:var(--fondoOscuro);
+    background-color:var(--fondoClaro);
 }
 
 
@@ -81,7 +81,7 @@ ul{
     display: block;
     margin:1px 0px;
     padding: 0px;
-    background-color: var(--fondoOscuro);
+    background-color: var(--fondoClaro);
 }
 
 .lista_lateral li a{
@@ -100,6 +100,7 @@ ul{
     display:block;
     font-size: 1.8rem;
     margin-top:50px;
+    margin-bottom: 15px;
     padding:0px;
     color:rgb(52, 133, 199);
 }
