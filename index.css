@@ -119,10 +119,10 @@ ul{
 }
 
 .proyecto{
-    width: 12rem;
-    height: 10rem;
+    width: 14rem;
+    height: 12rem;
     display:inline-block;
-    margin:1vw;
+    margin:0.8vw;
     padding:0px;
     overflow:hidden;
     background-color: rgb(194, 194, 194);
@@ -130,13 +130,13 @@ ul{
     vertical-align:top;
     position: relative;
     transition-property: margin,box-shadow;
-    transition-duration: 150ms;
+    transition-duration: 500ms;
 }
 
 .proyecto:hover{
     box-shadow:3px 3px var(--colorMenu);
-    margin-top: 0.5vw;
-    margin-bottom: 1.5vw;
+    margin-top: 0.3vw;
+    margin-bottom: 1.3vw;
 }
 
 .texto_proyecto{
@@ -161,7 +161,7 @@ ul{
     position: absolute;
     padding:2.4px;
     margin: 8px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color:var(--fondoClaro);
     background-color: var(--colorMenu);
     border-radius:3px;

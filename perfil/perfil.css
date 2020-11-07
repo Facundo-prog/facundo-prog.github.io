@@ -1,12 +1,17 @@
 
 .subtitulo{
     margin:5px;
-    font-size: 1.2em;
+    font-size: 1.2rem;
+    color:rgb(108, 109, 206);
 }
 
 .texto{
-    margin:10px;
+    margin:10px 20px;
     padding: 0px;
-    font-size: 1em;
+    font-size: 1rem;
     text-align: left;
+    background-color: rgb(194, 194, 194);
+    padding:5px;
+    border-radius: 3px;
+    color:rgb(0, 0, 0);
 }

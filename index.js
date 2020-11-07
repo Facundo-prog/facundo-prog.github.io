@@ -1,5 +1,5 @@
 const size = new autoAdjustSize(1000, "cont_img", "lista", "lista_lateral");
-const repos = new repository("guillermo-gerard", 8);
+const repos = new repository("facundo-prog", 8);
 var estadoMostrarTodo = false;
 
 function getArrayRepos(){
@@ -9,7 +9,7 @@ function getArrayRepos(){
     request.onload = () =>{ 
         repos.setArrayUser(JSON.parse(request.responseText)); 
         repos.lastRepo();
-        repos.showRepos("cont_proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto","proyecto");
+        repos.showRepos("cont_proyecto","proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto");
     }
     request.onerror = () =>{
         alert("Error al solicitar los repositorios");

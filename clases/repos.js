@@ -25,8 +25,8 @@ class repository{
             cadenaTemporal += textoFinal.substring(0,50) + "|";
 
             cadenaTemporal += user[i].html_url + "|";
-            cadenaTemporal += String(user[i].description).substring(0,120) + "|";
-            if(user[i].language == null){ cadenaTemporal += "Indefinido" }else{ cadenaTemporal += String(user[i].language).toUpperCase(); }
+            cadenaTemporal += String(user[i].description).substring(0,130) + "|";
+            if(user[i].language == null){ cadenaTemporal += "indefinido" }else{ cadenaTemporal += String(user[i].language).substring(0,25).toLowerCase(); }
 
             arrayFechaRepos[i] = cadenaTemporal.split("|");
         }
@@ -37,7 +37,7 @@ class repository{
         this.arrayRepos = arrayFechaRepos;
     }
 
-    showRepos(id_cont_proyecto,class_listName,class_listDesc,class_listLenguaje,class_listDiv){
+    showRepos(id_cont_proyecto,class_listDiv,class_listName,class_listDesc,class_listLenguaje){
         let listFather = document.getElementById(id_cont_proyecto);
         let listDiv;
         let listName;
@@ -61,7 +61,7 @@ class repository{
     
             if(this.arrayRepos[i][3] != "null"){
 
-                if(this.arrayRepos[i][3].length >= 120){
+                if(this.arrayRepos[i][3].length >= 130){
                     textDesc = document.createTextNode(this.arrayRepos[i][3] + " ...");
                 }
                 else{
