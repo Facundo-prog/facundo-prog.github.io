@@ -3,11 +3,11 @@ html{
 }
 
 body{
-    --colorMenu:rgb(59, 59, 59);/*rgb(255, 255, 255);*/
-    --fondoClaro:rgb(255, 143, 92);/*rgb(172, 171, 171);*/
-    --fondoOscuro:rgb(250, 110, 45);/*rgb(128, 128, 128);*/
+    --colorMenu:rgb(59, 59, 59);
+    --fondoClaro:rgb(255, 143, 92);
+    --fondoOscuro:rgb(250, 110, 45);
 
-    background-color:rgb(231, 231, 231);/*rgb(231, 231, 231);*/
+    background-color:rgb(255, 222, 184);
     margin:0px;
     padding:0px;
     font-family: sans-serif,Helvetica;
@@ -42,6 +42,7 @@ ul{
     position: relative;
     display: inline-block;
     width: 100%;
+    height: 2.65rem;
     margin:0px;
     padding:0px;
     background-color: var(--fondoOscuro);
@@ -60,11 +61,14 @@ ul{
     padding:10px 20px;
     margin:0px;
     color:#000;
+    transition-property:border,padding;
+    transition-duration: 150ms;
+
 }
 
 .lista li a:hover{
-    display: inline-block;
-    background-color:var(--fondoClaro);
+    border-bottom: 4px solid var(--colorMenu);
+    padding-bottom: 6px;
 }
 
 
@@ -102,7 +106,7 @@ ul{
     margin-top:50px;
     margin-bottom: 15px;
     padding:0px;
-    color:rgb(52, 133, 199);
+    color:rgb(0, 0, 0);
 }
 
 
@@ -125,10 +129,14 @@ ul{
     border-radius: 3px;
     vertical-align:top;
     position: relative;
+    transition-property: margin,box-shadow;
+    transition-duration: 150ms;
 }
 
 .proyecto:hover{
     box-shadow:3px 3px var(--colorMenu);
+    margin-top: 0.5vw;
+    margin-bottom: 1.5vw;
 }
 
 .texto_proyecto{
@@ -154,7 +162,7 @@ ul{
     padding:2.4px;
     margin: 8px;
     font-size: 0.8rem;
-    color:#fff;
+    color:var(--fondoClaro);
     background-color: var(--colorMenu);
     border-radius:3px;
     bottom: 0px;
@@ -169,10 +177,13 @@ ul{
     background-color:var(--fondoOscuro);
     color:#000;
     border-radius: 3px;
+    transition-property: color,background-color;
+    transition-duration: 150ms;
 }
 
 .boton_mostrarTodo:hover{
-    box-shadow: 3px 3px var(--colorMenu);
+    color:#fff;
+    background-color: var(--colorMenu);
 }
 
 
@@ -181,6 +192,6 @@ footer{
     color:var(--fondoClaro);
     font-size: 1rem;
     padding:6px 0px;
-    margin-top: 60px;
+    margin-top: 30px;
     margin-bottom: 10px;
 }

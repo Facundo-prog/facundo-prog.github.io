@@ -11,6 +11,9 @@ function getArrayRepos(){
         repos.lastRepo();
         repos.showRepos("cont_proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto","proyecto");
     }
+    request.onerror = () =>{
+        alert("Error al solicitar los repositorios");
+    }
     request.send();
 }
 
