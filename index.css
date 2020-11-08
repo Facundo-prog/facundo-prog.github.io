@@ -110,6 +110,11 @@ ul{
 }
 
 
+.textError{
+    font-size: 1.2rem;
+    color:red;
+}
+
 
 
 .cont_proyecto{
@@ -170,7 +175,7 @@ ul{
 
 
 .boton_mostrarTodo{
-    display: inline-block;
+    display: none;
     margin:20px auto;
     padding: 4px;
     font-size: 1rem;

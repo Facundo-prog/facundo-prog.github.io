@@ -4,15 +4,25 @@ var estadoMostrarTodo = false;
 
 function getArrayRepos(){
     let request = new XMLHttpRequest();
+    let btn_mostrarTodo = document.getElementById("boton_mostrarTodo");
 
     request.open("GET", "https://api.github.com/users/" + repos.user + "/repos", true);
     request.onload = () =>{ 
         repos.setArrayUser(JSON.parse(request.responseText)); 
         repos.lastRepo();
         repos.showRepos("cont_proyecto","proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto");
+
+        if(repos.arrayUser.length > 8){
+            btn_mostrarTodo.style = "display:inline-block;"
+        }
     }
     request.onerror = () =>{
-        alert("Error al solicitar los repositorios");
+        let father = document.getElementById("titulo");
+        let errorElement = document.createElement("p");
+        let errorText = document.createTextNode("Ups! Hubo un error al solicitar los repositorios");
+        errorElement.appendChild(errorText);
+        errorElement.setAttribute("class","textError");
+        father.appendChild(errorElement);
     }
     request.send();
 }
