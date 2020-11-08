@@ -3,12 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="StyleSheet" href="index.css" type="text/css">
-    <title>Perfil</title>
+    <link rel="StyleSheet" href="/index.css" type="text/css">
+    <script src="/clases/repos.js"></script>
+    <script src="/clases/autoSize.js"></script>
+    <title>Inicio</title>
 </head>
+<body onresize="size.ajustarTamaño()" onload="size.ajustarTamaño(),getArrayRepos()">
 
-<body>
-    
-    <h1 class="titulo">Proximamente web de presentacion</h1>
+    <header id="menu">
+        <div class="cont_img" id="cont_img">
+            <img id="img_menu" class="img_menu" src="menu.png" onclick="size.expandirMenu()" />
+        </div>
+
+        <ul class="lista" id="lista">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/perfil/perfil.html">Sobre Mi</a></li>
+        </ul>
+
+        <ul class="lista_lateral" id="lista_lateral">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/perfil/perfil.html">Sobre Mi</a></li>
+        </ul>
+    </header>
+
+    <section class="main">
+        <h1 class="titulo" id="titulo">Proyectos recientes</h1>
+        
+        <section class="cont_proyecto" id="cont_proyecto"></section>
+
+        <a class="boton_mostrarTodo" id="boton_mostrarTodo" onclick="mostrarTodo()">Mostrar mas</a>
+
+    </section>
+
+    <footer>
+        <p class="texto_footer"></p>
+    </footer>
+
+    <script src="/index.js" ></script>
+>>>>>>> test
 </body>
 </html>

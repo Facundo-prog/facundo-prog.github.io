@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="/index.css" type="text/css">
+    <link rel="StyleSheet" href="/perfil/perfil.css" type="text/css">
+    <script src="/clases/autoSize.js"></script>
+    <title>Sobre Mi</title>
+</head>
+<body onload="size.ajustarTamaño()" onresize="size.ajustarTamaño()">
+
+    <header id="menu">
+        <div class="cont_img" id="cont_img">
+            <img id="img_menu" class="img_menu" src="/menu.png" onclick="size.expandirMenu()" />
+        </div>
+
+        <ul class="lista" id="lista">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/perfil/perfil.html">Sobre Mi</a></li>
+        </ul>
+
+        <ul class="lista_lateral" id="lista_lateral">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/perfil/perfil.html">Sobre Mi</a></li>
+        </ul>
+    </header>
+
+    <section class="main">
+        <h1 class="titulo" id="titulo">Biografía</h1>
+
+        <h3 class="subtitulo">Autodidacta apasionado del Software y Hardware</h3> <br/>
+
+        <p class="texto">Estudiante de Técnico Analista de Sistemas. En los tiempos libres realizo proyectos con Arduino, ESP8266 y ESP32</p>
+
+        <p class="texto">
+            <strong>Conocimientos:</strong> <br/>
+            <span style="text-decoration-line: underline;">Avanzado:</span> C++, HTML, CSS</li> <br/>
+            <span style="text-decoration-line: underline;">Medio:</span> JavaScript</li> <br/>
+            <span style="text-decoration-line: underline;">Base:</span> PHP y SQL
+        </p>
+
+        <p class="texto"><strong>Email: </strong>facundo.prog@gmail.com</p>
+    </section>
+
+    <footer>
+        <p class="texto_footer"></p>
+    </footer>
+
+    <script src="/perfil/perfil.js" ></script>
+</body>
+</html>
