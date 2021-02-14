@@ -8,7 +8,10 @@ function getArrayRepos(){
 
     request.open("GET", "https://api.github.com/users/" + repos.user + "/repos", true);
     request.onload = () =>{ 
-        repos.setArrayUser(JSON.parse(request.responseText)); 
+        repos.setArrayUser(JSON.parse(request.responseText));
+
+        if(repos.arrayUser.length <= 1){ repos.showError(); } 
+
         repos.lastRepo();
         repos.showRepos("cont_proyecto","proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto");
 

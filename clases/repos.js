@@ -95,4 +95,15 @@ class repository{
         }
     }
 
+    showError(){
+        let father = document.getElementById("titulo");
+        let errorElement = document.createElement("p");
+        let errorText = document.createTextNode("Ups! Hubo un error al solicitar los repositorios");
+        errorElement.appendChild(errorText);
+        errorElement.setAttribute("class","textError");
+        father.appendChild(errorElement);
+
+        console.log(this.arrayUser);
+    }
+
 }
