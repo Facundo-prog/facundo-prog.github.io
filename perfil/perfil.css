@@ -3,10 +3,11 @@ html{
 }
 
 .subtitulo{
-    margin:5px;
-    font-size: 1.3rem;
+    margin:40px 20px 0px 20px;
+    font-size: 1.2rem;
     color:rgb(68, 47, 253);
     padding:0px;
+    text-align: left;
 }
 
 .subtitulo_texto{

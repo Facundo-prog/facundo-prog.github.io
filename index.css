@@ -14,7 +14,7 @@ body{
 }
 
 .main, footer, header{
-    max-width: 1000px;
+    max-width: 1100px;
     margin:0px auto;
     text-align: center;
 }
@@ -194,9 +194,13 @@ ul{
 
 footer{
     background-color:var(--colorMenu);
-    color:var(--fondoClaro);
-    font-size: 1rem;
-    padding:6px 0px;
+    padding:0px 0px;
     margin-top: 40px;
-    margin-bottom: 10px;
+}
+
+.texto_footer{
+    padding:5px;
+    color:white;
+    font-size: 1rem;
+    text-align: center;
 }
