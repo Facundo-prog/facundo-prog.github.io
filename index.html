@@ -11,31 +11,29 @@
 </head>
 <body onresize="size.ajustarTamaño()" onload="size.ajustarTamaño(),getArrayRepos()">
 
-    <div class="content" id="content">
-        <header id="menu">
-            <div class="cont_img" id="cont_img">
-                <img id="img_menu" width="32" height="22" class="img_menu" src="img/menu.png" alt="Menu" onclick="size.expandirMenu()" />
-            </div>
+    <header id="menu">
+        <div class="cont_img" id="cont_img">
+            <img id="img_menu" width="32" height="22" class="img_menu" src="img/menu.png" alt="Menu" onclick="size.expandirMenu()" />
+        </div>
 
-            <ul class="lista" id="lista">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="/profile.html">Sobre Mi</a></li>
-            </ul>
-        </header>
+        <ul class="lista" id="lista">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/profile.html">Sobre Mi</a></li>
+        </ul>
+    </header>
 
-        <section class="main">
-            <h1 class="titulo" id="titulo">Proyectos recientes</h1>
-            
-            <section class="cont_proyecto" id="cont_proyecto"></section>
+    <section class="main">
+        <h1 class="titulo" id="titulo">Proyectos recientes</h1>
+        
+        <section class="cont_proyecto" id="cont_proyecto"></section>
 
-            <a class="boton_mostrarTodo" id="boton_mostrarTodo" onclick="mostrarTodo()">Mostrar mas</a>
+        <a class="boton_mostrarTodo" id="boton_mostrarTodo" onclick="mostrarTodo()">Mostrar mas</a>
 
-        </section>
+    </section>
 
-        <footer>
-            <p class="texto_footer">Desarrollado por Facundo Carroz</p>
-        </footer>
-    </div>
+    <footer>
+        <p class="texto_footer">Desarrollado por Facundo Carroz</p>
+    </footer>
 
     <script src="/index.js" ></script>
 </body>
