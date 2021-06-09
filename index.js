@@ -11,7 +11,9 @@ function getArrayRepos(){
     request.onload = () =>{ 
         repos.setArrayUser(JSON.parse(request.responseText));
 
-        if(repos.arrayUser.length <= 1){ repos.showError(); } 
+        if(repos.arrayUser.length <= 0 || repos.arrayUser['message'] == "Not Found"){ 
+            repos.showError("titulo"); 
+        } 
 
         repos.lastRepo();
         repos.showRepos("cont_proyecto","proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto");
@@ -20,19 +22,7 @@ function getArrayRepos(){
             btn_mostrarTodo.style = "display:inline-block;"
         }
     }
-    request.onloadend = () =>{
-        let data = [];
-        data = JSON.parse(request.responseText);
 
-        if(data['message'] == "Not Found"){
-            let father = document.getElementById("titulo");
-            let errorElement = document.createElement("p");
-            let errorText = document.createTextNode("Ups! Hubo un error al solicitar los repositorios");
-            errorElement.appendChild(errorText);
-            errorElement.setAttribute("class","textError");
-            father.appendChild(errorElement);
-        }
-    }
     request.send();
 }
 
