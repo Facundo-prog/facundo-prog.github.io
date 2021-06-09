@@ -7,7 +7,7 @@ body{
     --fondoClaro:rgb(255, 143, 92);
     --fondoOscuro:rgb(250, 110, 45);
 
-    background-color:rgb(255, 222, 184);
+    background-color:rgba(255, 222, 184, 0.6);
     margin:0px;
     padding:0px;
     font-family: sans-serif,Helvetica,Arial;
@@ -170,6 +170,31 @@ body{
 }
 
 
+.subtitulo{
+    margin:40px 20px 0px 20px;
+    font-size: 1.2rem;
+    color:rgb(68, 47, 253);
+    padding:0px;
+    text-align: left;
+}
+
+.subtitulo_texto{
+    font-size: 1.1rem;
+    text-align: left;
+    margin:0px 20px;
+    padding:0px;
+}
+
+.texto{
+    margin:10px 20px;
+    padding: 0px;
+    font-size: 0.95rem;
+    text-align: left;
+    border-radius: 3px;
+    color:rgb(0, 0, 0);
+}
+
+
 .boton_mostrarTodo{
     display: none;
     margin:20px auto;
@@ -191,7 +216,7 @@ body{
 footer{
     background-color:var(--colorMenu);
     padding:0px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .texto_footer{
