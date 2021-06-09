@@ -1,6 +1,6 @@
 
 class autoAdjustSize{
-    constructor(size,id_img, id_lista,id_lista_lateral){
+    constructor(size,id_img, id_lista){
         this.size = size;
         this.cont_img = document.getElementById(id_img);
         this.lista = document.getElementById(id_lista);
@@ -8,7 +8,6 @@ class autoAdjustSize{
     }
 
     ajustarTamaño(){
-
         this.estadoPrecionado = false;
     
         if(document.body.clientWidth <= this.size){
@@ -24,7 +23,6 @@ class autoAdjustSize{
     }
 
     expandirMenu(){
-
         this.estadoPrecionado = !this.estadoPrecionado;
     
         if(this.estadoPrecionado == false){

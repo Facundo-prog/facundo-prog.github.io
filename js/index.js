@@ -1,8 +1,9 @@
-const size = new autoAdjustSize(1000, "cont_img", "lista", "lista_lateral");
-const repos = new repository("facundo-prog", 8);
+const size = new autoAdjustSize(1000, "cont_img", "lista");
+var repos;
 var estadoMostrarTodo = false;
 
 function getArrayRepos(){
+    repos = new repository("facundo-prog", 8);
     let request = new XMLHttpRequest();
     let btn_mostrarTodo = document.getElementById("boton_mostrarTodo");
 
@@ -19,13 +20,18 @@ function getArrayRepos(){
             btn_mostrarTodo.style = "display:inline-block;"
         }
     }
-    request.onerror = () =>{
-        let father = document.getElementById("titulo");
-        let errorElement = document.createElement("p");
-        let errorText = document.createTextNode("Ups! Hubo un error al solicitar los repositorios");
-        errorElement.appendChild(errorText);
-        errorElement.setAttribute("class","textError");
-        father.appendChild(errorElement);
+    request.onloadend = () =>{
+        let data = [];
+        data = JSON.parse(request.responseText);
+
+        if(data['message'] == "Not Found"){
+            let father = document.getElementById("titulo");
+            let errorElement = document.createElement("p");
+            let errorText = document.createTextNode("Ups! Hubo un error al solicitar los repositorios");
+            errorElement.appendChild(errorText);
+            errorElement.setAttribute("class","textError");
+            father.appendChild(errorElement);
+        }
     }
     request.send();
 }
