@@ -10,7 +10,7 @@ body{
     background-color:rgb(255, 222, 184);
     margin:0px;
     padding:0px;
-    font-family: sans-serif,Helvetica;
+    font-family: sans-serif,Helvetica,Arial;
 }
 
 .main, footer, header{
