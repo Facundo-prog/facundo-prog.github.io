@@ -27,6 +27,7 @@ body{
 }
 
 .cont_img{
+    display:none;
     width: 100%;
     background-color:var(--fondoOscuro);
     padding:0px;
@@ -81,16 +82,17 @@ body{
     display: block;
     margin:1px 0px;
     padding: 0px;
-    background-color: var(--fondoClaro);
 }
 
 .lista_lateral li a{
     display: block;
     text-decoration: none;
-    padding: 10px 20px;
-    margin:0px;
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--fondoClaro);
+    margin:0px 20px;
     font-size: 1.2rem;
     color:#000;
+    text-align: center;
 }
 
 
