@@ -1,4 +1,3 @@
-const size = new autoAdjustSize(1000, "cont_img", "lista");
 var repos;
 var estadoMostrarTodo = false;
 
@@ -16,7 +15,7 @@ function getArrayRepos(){
         } 
 
         repos.lastRepo();
-        repos.showRepos("cont_proyecto","proyecto","texto_proyecto","desc_proyecto","lenguaje_proyecto");
+        repos.showRepos("cont_proyecto","proyecto","titulo_proyecto","desc_proyecto","lenguaje_proyecto");
 
         if(repos.arrayUser.length > 8){
             btn_mostrarTodo.style = "display:inline-block;"
@@ -37,8 +36,14 @@ function mostrarTodo(){
     for(let i=inicio;i >= 0;i--){
         let element = document.getElementById(i);
 
-        if(estadoMostrarTodo == false){ element.style = "display:inline-block;"; textoBoton.textContent = "Mostrar menos"; }
-        else{ element.style = "display:none;"; textoBoton.textContent = "Mostrar mas"; }
+        if(estadoMostrarTodo == false){ 
+            element.style = "display:flex;"; 
+            textoBoton.textContent = "Mostrar menos"; 
+        }
+        else{ 
+            element.style = "display:none;"; 
+            textoBoton.textContent = "Mostrar mas"; 
+        }
     }
 
     estadoMostrarTodo = !estadoMostrarTodo;
