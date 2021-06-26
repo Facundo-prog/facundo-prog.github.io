@@ -16,7 +16,7 @@ body{
 
 
 section, footer, nav{
-    max-width: 1100px;
+    max-width: 1200px;
     margin:0px auto;
 }
 section{
@@ -211,4 +211,4 @@ footer{
 @media (min-width: 576px){ .cont_proyecto{max-width: 540px;} }
 @media (min-width: 768px){ .cont_proyecto{max-width: 720px;} }
 @media (min-width: 992px){ .cont_proyecto{max-width: 960px;} }
-@media (min-width: 1200px){ .cont_proyecto{max-width: 1000px;} }
+@media (min-width: 1200px){ .cont_proyecto{max-width: 1100px;} }
