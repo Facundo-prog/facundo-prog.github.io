@@ -2,7 +2,7 @@ var repos;
 var estadoMostrarTodo = false;
 
 function getArrayRepos(){
-    repos = new repository("facundo-prog", 8);
+    repos = new repository("guillermo-gerard", 8);
     let request = new XMLHttpRequest();
     let btn_mostrarTodo = document.getElementById("boton_mostrarTodo");
 
