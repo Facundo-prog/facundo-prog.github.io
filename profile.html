@@ -4,44 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="/index.css"/>
-    <script src="/class/autoSize.js"></script>
     <link rel="shortcut icon" href="../img/favicon256.png">
     <title>Sobre Mi</title>
 </head>
-<body onload="size.ajustarTamaño()" onresize="size.ajustarTamaño()">
+<body>
+    <nav id="nav">
+        <div><a href="/index.html">Inicio</a></div>
+        <div><a href="/profile.html">Sobre Mi</a></div>
+    </nav>
 
-    <header id="menu">
-        <div class="cont_img" id="cont_img">
-            <img id="img_menu" width="32" height="22" class="img_menu" src="../img/menu.png" alt="Menu" onclick="size.expandirMenu()" />
+    <section>
+        <div class="description">
+            <h1 class="titulo" id="titulo">Facundo Carroz</h1>
+            <h3 class="subtitulo">Autodidacta apasionado del Software y Hardware</h3>
+            <p class="texto">Técnico Analista de Sistemas. En los tiempos libres realizo proyectos integrando Arduino, ESP8266 y ESP32</p>
+            
+            <div class="known_language">
+                <div class="texto">C++</div>
+                <div class="texto">PHP</div>
+                <div class="texto">SQL</div>
+                <div class="texto">HTML</div>
+                <div class="texto">CSS</div>
+                <div class="texto">JavaScript</div>
+            </div>
+
+            <div class="contact">
+                <img src="img/img_email.png" alt="email" width="30" height="24">
+                <p>facundo.prog@gmail.com</p>
+            </div>
         </div>
-
-        <ul class="lista" id="lista">
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="/profile.html">Sobre Mi</a></li>
-        </ul>
-    </header>
-
-    <section class="main">
-        <h1 class="titulo" id="titulo">Facundo Carroz</h1>
-
-        <h3 class="subtitulo">Autodidacta apasionado del Software y Hardware</h3>
-
-        <p class="texto">Técnico Analista de Sistemas. En los tiempos libres realizo proyectos integrando Arduino, ESP8266 y ESP32</p></br>
-
-        <p class="subtitulo_texto"><strong>Conocimientos</strong></p>
-
-        <p class="texto">
-            C++ <br/>
-            PHP <br/>
-            SQL <br/>
-            HTML, CSS, JavaScript
-        </p>
-
-        <br/>
-        <p class="subtitulo_texto"><strong>Contancto</strong></p>
-        
-        <p class="texto">facundo.prog@gmail.com</p>
-
     </section>
 
     <footer>
