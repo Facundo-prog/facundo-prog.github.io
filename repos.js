@@ -37,12 +37,14 @@ class repository{
         this.arrayRepos = arrayFechaRepos;
     }
 
-    showRepos(id_cont_proyecto,class_listDiv,class_listName,class_listDesc,class_listLenguaje){
-        let listFather = document.getElementById(id_cont_proyecto);
-        let listDiv;
-        let listName;
-        let listDesc;
-        let listLenguaje;
+    showRepos(id_cont_proyecto,class_listDiv,class_listName,class_listDesc){
+        let divFather = document.getElementById(id_cont_proyecto);
+        let proyectDiv;
+        let proyectName;
+        let proyectDesc;
+        let proyectDivLenguajeLink;
+        let proyectLenguaje;
+        let proyectUrl;
         let textName;
         let textDesc;
         let textLenguaje;
@@ -52,11 +54,13 @@ class repository{
         if(this.sizeGetRepos == -1){ sizeGetRepos = quantityRepos; }
     
         for(let i=quantityRepos;i >= 0;i--){
-            listDiv = document.createElement("div");
-            
-            listName = document.createElement("p");
-            listDesc = document.createElement("p");
-            listLenguaje = document.createElement("p");
+            proyectDiv = document.createElement("div");
+            proyectName = document.createElement("p");
+            proyectDesc = document.createElement("p");
+            proyectDivLenguajeLink = document.createElement("div");
+            proyectLenguaje = document.createElement("p");
+            proyectUrl = document.createElement("a");
+
             textName = document.createTextNode(this.arrayRepos[i][1]);
     
             if(this.arrayRepos[i][3] != "null"){
@@ -74,24 +78,28 @@ class repository{
 
             textLenguaje = document.createTextNode(this.arrayRepos[i][4]);
     
-            listName.appendChild(textName);
-            listDesc.appendChild(textDesc);
-            listLenguaje.appendChild(textLenguaje);
-            listName.setAttribute("class",class_listName);
-            listDesc.setAttribute("class",class_listDesc);
-            listLenguaje.setAttribute("class",class_listLenguaje);
-            listDiv.appendChild(listName);
-            listDiv.appendChild(listDesc);
-            listDiv.appendChild(listLenguaje);
-            listDiv.setAttribute("class",class_listDiv);
-            listDiv.setAttribute("onclick","openLink(id)");
-            listDiv.setAttribute("id", String(i));
+            proyectName.appendChild(textName);
+            proyectDesc.appendChild(textDesc);
+            proyectLenguaje.appendChild(textLenguaje);
+            proyectUrl.appendChild(document.createTextNode("Ver"));
+
+            proyectName.setAttribute("class",class_listName);
+            proyectDesc.setAttribute("class",class_listDesc);
+            proyectDiv.setAttribute("class",class_listDiv);
+            proyectDivLenguajeLink.setAttribute("class", "div_lenguaje_link_proyecto");
+            proyectUrl.setAttribute("href", this.arrayRepos[i][2]);
+
+            proyectDiv.appendChild(proyectName);
+            proyectDiv.appendChild(proyectDesc);
+            proyectDivLenguajeLink.appendChild(proyectLenguaje);
+            proyectDivLenguajeLink.appendChild(proyectUrl);
+            proyectDiv.appendChild(proyectDivLenguajeLink);
 
             if(i <= quantityRepos-sizeGetRepos){
-                listDiv.setAttribute("style","display:none;");
+                proyectDiv.setAttribute("style","display:none;");
             }
 
-            listFather.appendChild(listDiv);
+            divFather.appendChild(proyectDiv);
         }
     }
 

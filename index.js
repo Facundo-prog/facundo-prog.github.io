@@ -2,7 +2,7 @@ var repos;
 var estadoMostrarTodo = false;
 
 function getArrayRepos(){
-    repos = new repository("guillermo-gerard", 8);
+    repos = new repository("facundo-prog", 8);
     let request = new XMLHttpRequest();
     let btn_mostrarTodo = document.getElementById("boton_mostrarTodo");
 
@@ -15,7 +15,7 @@ function getArrayRepos(){
         } 
 
         repos.lastRepo();
-        repos.showRepos("cont_proyecto","proyecto","titulo_proyecto","desc_proyecto","lenguaje_proyecto");
+        repos.showRepos("cont_proyecto","proyecto","titulo_proyecto","desc_proyecto");
 
         if(repos.arrayUser.length > 8){
             btn_mostrarTodo.style = "display:inline-block;"
