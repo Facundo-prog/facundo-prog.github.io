@@ -9,6 +9,7 @@ body{
     --naranjaClaro:#F0A500;
     --naranjaOscuro:#E45826;
     --salmon:#F54748;
+    --backgroundClaro:#FFEFCF;
 
     font-family: sans-serif,Helvetica,Arial;
     font-size:16px;
@@ -18,9 +19,11 @@ body{
 section, footer, nav{
     max-width: 1200px;
     margin:0px auto;
+    background-color: var(--backgroundClaro);
 }
 section{
     text-align: center;
+    padding-bottom: 4rem;
 }
 
 
@@ -46,14 +49,14 @@ nav a:hover{
 .titulo{
     display:inline-block;
     font-size: 1.7em;
-    margin:1.8em auto 1em auto;
+    margin:1.8em auto 1.1em auto;
     padding: 0.3em;
     color:var(--grisOscuro);
     text-align: center;
     transition: all 100ms;
 }
 .titulo:hover{
-    color: white;
+    color: var(--backgroundClaro);
     text-shadow: 0px 0px 15px var(--salmon), 0px 0px 10px var(--salmon), 0px 0px 5px var(--grisOscuro);
 }
 
@@ -79,7 +82,7 @@ nav a:hover{
     display:flex;
     flex-direction: column;
     margin:0.7em auto;
-    background-color: #E6D5B8;
+    background-color: #D2D3C9;
     border-radius: 5px;
     transition: all 200ms;
     overflow: hidden;
@@ -166,12 +169,12 @@ nav a:hover{
     padding: 0.5em;
     margin: 0.2em 0.2em 0px 0px;
     background-color: #343F56;
-    color: white;
+    color: var(--backgroundClaro);
     border:1px solid #343F56;
     transition:all 100ms;
 }
 .known_language > div:hover{
-    background-color: white;
+    background-color: var(--backgroundClaro);
     color: #343F56;
 }
 .contact{
@@ -208,7 +211,6 @@ footer{
     width: 100%;
     display:block;
     background-color:var(--grisClaro);
-    margin-top:3em;
 }
 .texto_footer{
     display: block;
