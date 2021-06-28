@@ -81,11 +81,12 @@ class repository{
             proyectName.appendChild(textName);
             proyectDesc.appendChild(textDesc);
             proyectLenguaje.appendChild(textLenguaje);
-            proyectUrl.appendChild(document.createTextNode("Ver"));
+            proyectUrl.appendChild(document.createTextNode("ver"));
 
             proyectName.setAttribute("class",class_listName);
             proyectDesc.setAttribute("class",class_listDesc);
             proyectDiv.setAttribute("class",class_listDiv);
+            proyectDiv.setAttribute("id",i);
             proyectDivLenguajeLink.setAttribute("class", "div_lenguaje_link_proyecto");
             proyectUrl.setAttribute("href", this.arrayRepos[i][2]);
 
