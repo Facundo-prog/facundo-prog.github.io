@@ -142,17 +142,10 @@ nav a:hover{
     padding:0px;
     text-align: left;
 }
-.subtitulo_dos{
-    font-size: 1.1em;
-    text-align: left;
-    padding:0px;
-    margin-top:1.5em;
-}
 .texto{
     padding: 0px;
     font-size: 0.95rem;
     text-align: left;
-    border-radius: 3px;
     color:#222;
 }
 .known_language{
@@ -168,6 +161,7 @@ nav a:hover{
     background-color: #343F56;
     color: var(--backgroundClaro);
     border:1px solid #343F56;
+    border-radius: 3px;
     transition:all 100ms;
 }
 .known_language > div:hover{
@@ -175,16 +169,27 @@ nav a:hover{
     color: #343F56;
 }
 .contact{
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
-.contact > img:hover{
+.contact > a{
+    display: inline-flex;
+    margin-right:0.5em;
+    padding:0.3em;
     background-color: #F54748;
-    border-radius: 4px;
+    border:2px solid var(--grisClaro);
+    border-radius: 3px;
+    overflow: hidden;
 }
-.contact > p{
-    margin:auto auto auto 0.5em;
+.contact > a:hover{
+    background-color: var(--backgroundClaro);
 }
+.contact img{
+    margin:auto 0em;
+}
+
 
 
 .boton_mostrarTodo{
