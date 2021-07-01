@@ -11,7 +11,7 @@ function getArrayRepos(){
         repos.setArrayUser(JSON.parse(request.responseText));
 
         if(repos.arrayUser.length <= 0 || repos.arrayUser['message'] == "Not Found"){ 
-            repos.showError("titulo"); 
+            repos.showError("textError"); 
         } 
 
         repos.lastRepo();
